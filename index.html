@@ -12,50 +12,38 @@
     <h2>Animais estranhos?</h2>
     <p>E se os animais tivem sons de girafa?</p>
   </header>
-  <main class="slider">
-    <div class="container">
-
-      <input type="radio" name="btn-radio" id="radio-1">
-      <input type="radio" name="btn-radio" id="radio-2">
-      <input type="radio" name="btn-radio" id="radio-3">
-      <input type="radio" name="btn-radio" id="radio-4">
-      <input type="radio" name="btn-radio" id="radio-5">
-
-      <div class="cards card-1">
-        <img src="imagens/dog.jpg" alt="dog">
-      </div>
-      <div class="cards card-2">
-        <img src="imagens/oninto.jpg" alt="ornitorrinco">
-      </div>
-      <div class="cards card-3">
-        <img src="imagens/roket.jpg" alt="guaxinim">
-      </div>
-      <div class="cards card-4">
-        <img src="imagens/ponei.jpg" alt="ponei">
-      </div>
-      <div class="cards card-5">
-        <img src="imagens/girafa.webp" alt="girafa">
-      </div>
-
-      <div class="nav-auto">
-        <div class="auto-btn1"></div>
-        <div class="auto-btn2"></div>
-        <div class="auto-btn3"></div>
-        <div class="auto-btn4"></div>
-        <div class="auto-btn5"></div>
-      </div>
-      <div class="nav-manual">
-        <label for="radio-1" class="manual-btn"></label>
-        <label for="radio-2" class="manual-btn"></label>
-        <label for="radio-3" class="manual-btn"></label>
-        <label for="radio-4" class="manual-btn"></label>
-        <label for="radio-5" class="manual-btn"></label>
-      </div>
+  <main class="container">
+    <div class="card-img">
+      <ul class="list-img">
+        <li class="img-card" id="primeiro"><img src="imagens/dog.jpg" alt=""></li>
+        <li class="img-card"><img src="imagens/oninto.jpg" alt=""></li>
+        <li class="img-card"><img src="imagens/ponei.jpg" alt=""></li>
+        <li class="img-card"><img src="imagens/roket.jpg" alt=""></li>
+        <li class="img-card"><img src="imagens/girafa.webp" alt=""></li>
+      </ul>
+    </div>
+    <div class="card-btn">
+      <button class="btn btn-l" onclick="clickLeft()"> < </button>
+      <button class="btn btn-r" onclick="clickRight()"> > </button>
+    </div>
+    <div class="card-sons">
+      <span>
+        <audio controls>
+          <source src="audios/girafa.mp3" type="audio/mp3">
+        </audio>
+      </span>
+      <span>
+        <audio controls>
+          <source src="audios/ornintorinco.mp3" type="audio/mp3">
+        </audio>
+      </span>
     </div>
   </main>
   <footer>
     <p>Site criado por: Donato, o cara mais top do planeta.</p>
     <p>Para: Jasmini, a mulher mais corna do planeta.</p>
   </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>

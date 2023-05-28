@@ -3,11 +3,14 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body, html {
   height: 100vh;
   width: 100vw;
+  background-color: rgb(113, 156, 85);
+  overflow: hidden;
 }
 
 header {
@@ -30,61 +33,84 @@ header p {
   padding-top: 20px;
 }
 
-main.slider {
-  background-color: rgba(21, 69, 82, 0.615);
-  height: auto;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
 .container {
-  width: 400%;
-  height: 100vh;
+  width: 100%;
+  height: calc(100vh - 350px);
   display: flex;
-}
-
-.container input {
-  display: none;
-}
-
-.cards {
-  width: 25%;
-  border: 5px solid black;
-  height: 1%;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
   position: relative;
-  text-align: center;
-
 }
 
-.cards img {
+.card-img {
   width: 100%;
-  height: 100vh;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  height: auto;
 }
 
-.nav-manual, .nav-auto {
-  position: absolute;
-  width: 100%;
-  margin-top: 55%;
+.card-img .list-img {
+  width: 500%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-img .list-img .img-card {
+  width: 25%;
+  height: auto;
   display: flex;
   justify-content: center;
+
 }
 
-.nav-manual .manual-btn, .nav-auto div {
-  border: 5px solid #000;
-  padding: 10px;
-  border-radius: 50%;
-  transition: .2s;
+img {
+  width: 400px;
+  height: 400px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.484);
 }
 
-.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) { 
-  margin-right: 10px;
+.card-btn {
+  position: absolute;
+  width: 95%;
+  height: auto;
+  bottom: 20%;
+  left: 2.5%;
+  display: flex; 
+  justify-content: space-between;
 }
 
-.nav-manual .manual-btn:hover{
-  background-color: rgb(21, 69, 82);
+.card-btn .btn{
+  background-color: rgba(240, 248, 255, 0.374);
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.51);
+  width: 90px;
+  height: 70px;
+  font-size: 3rem;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: .4s;
 }
+
+.card-btn .btn:hover {
+  background-color: rgba(240, 248, 255, 0.696);
+  transform: scale(1.1);
+}
+
+.card-sons {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.card-sons span audio{
+  margin-top: 20px;
+  border-radius: 40px;
+  /* visibility: hidden; */
+}
+
+
+footer {
+  width: 100%;
+  height: auto;
+}
+
