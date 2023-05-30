@@ -61,7 +61,12 @@ header p {
   height: auto;
   display: flex;
   justify-content: center;
+}
 
+.card-img #primeiro {
+  left: 0%;
+  border: 5px solid;
+  transition: slider 5s ease-in-out;
 }
 
 img {
@@ -112,5 +117,15 @@ img {
 footer {
   width: 100%;
   height: auto;
+}
+
+@keyframes slider {
+  from {
+    left: 0%;
+  }
+
+  top {
+    left: -500%;
+  }
 }
 
