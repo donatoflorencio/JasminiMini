@@ -1,67 +1,90 @@
-@charset "UTF-8";
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+#header {
+  width: 100%;
+  height: 75px;
+  margin: 20px 0px  0px 20px;
+}
+
+#header p {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
 body, html {
-  height: 100vh;
-  width: 100vw;
+  width: 97vw;
+  height: 97vh;
 }
 
-#container {
-  border: 2px solid;
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: 150px auto 70px;
-}
-
-header {
-  background-color: rgb(21, 69, 82);
-}
-
-header h2 {
-  color: white;
-  font-size: 2.2rem;
-  text-align: center;
-  padding-top: 10px;
-}
-
-header p {
-  color: white;
-  font-size: 1.8rem;
-  text-align: center;
-  padding-top: 20px;
-}
-
-main {
-}
-
-.list-img {
-  display: flex;
-  width: 500%;
-  justify-content: space-around;
-}
-
-.img-card {
+.center {
+  width: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid;
+}
+
+#slide {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+
+  box-shadow: 0px 5px 20px .7px rgba(0, 0, 0, 0.642);
+}
+
+#slide img {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#slide img.active {
+  opacity: 1;
+}
+
+.center-aud {border: 1px solid;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.center-aud img.active  {
+  display: flex;
+  width: 0px;
+  height: 100px;
+}
+
+.center-btn {
+  width: 100%;
+  height: 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.center-btn #prevButton, #nextButton {
+  padding: 15px 20px;
+  border: none;
+  background-color: rgba(67, 63, 63, 0.27);
+  color: rgb(0, 0, 0);
   border-radius: 4px;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  box-shadow: 0px 0px 10px .7px rgba(0, 0, 0, 0.596);
 }
 
-
-img {
-  width: 450px;
-  height: 500px;
-  border-radius: 4px;
+.center-btn #prevButton:hover, #nextButton:hover {
+  box-shadow: 0px 0px 10px .7px rgba(0, 0, 0, 0.223);
 }
-
-
-footer {
-}
-
-

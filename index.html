@@ -1,49 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
   <title>Document</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-<div id="container">
-  <header>
-    <h2>Animais estranhos?</h2>
-    <p>E se os animais tivem sons de girafa?</p>
+  <header id="header">
+    <p>Animais com sons estranhos?</p>
   </header>
-  <main>
-    <ul class="list-img">
-      <li class="img-card" id="primeiro"><img src="imagens/dog.jpg" alt=""></li>
-      <li class="img-card"><img src="imagens/oninto.jpg" alt=""></li>
-      <li class="img-card"><img src="imagens/ponei.jpg" alt=""></li>
-      <li class="img-card"><img src="imagens/roket.jpg" alt=""></li>
-      <li class="img-card"><img src="imagens/girafa.webp" alt=""></li>
-    </ul>
-    <div class="card-btn">
-      <button class="btn btn-l" onclick="clickLeft()"> < </button>
-      <button class="btn btn-r" onclick="clickRight()"> > </button>
+  <div class="center">
+    <div id="slide">
+      <img src="imagens/dog.jpg" class="active">
+      <img src="imagens/oninto.jpg">
+      <img src="imagens/ponei.jpg">
+      <img src="imagens/roket.jpg">
+      <img src="imagens/girafa.webp">
     </div>
-    <div class="card-sons">
-      <span>
-        <audio controls>
-          <source src="audios/girafa.mp3" type="audio/mp3">
-        </audio>
-      </span>
-      <span>
-        <audio controls>
-          <source src="audios/ornintorinco.mp3" type="audio/mp3">
-        </audio>
-      </span>
-    </div>
-  </main>
-  <footer>
-    <p>Site criado por: Donato, o cara mais top do planeta.   </p>
-    <p>Para: Jasmini, a mulher mais corna do planeta.</p>
-  </footer>
-</div>
-<script src="index.js"></script>
+  </div>
+
+  <div class="center-aud">
+    <audio id="leftAudio" src="audios/girafa.mp3" controls></audio>
+    <audio id="rightAudio" src="audios/ornintorinco.mp3" controls></audio>
+  </div>
+
+  <div class="center-btn">
+    <button id="prevButton">Anterior</button>
+    <button id="nextButton">Próximo</button>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
